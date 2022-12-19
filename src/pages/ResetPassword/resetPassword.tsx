@@ -74,10 +74,13 @@ const ResetPassword = () => {
 							</div>
 							<button
 								type="submit"
+								// eslint-disable-next-line @typescript-eslint/no-misused-promises
 								onClick={async () => await fetchLink()}
 								className="btn-primary"
 							>
-								<Link className="btn">Send Reset Link</Link>
+								<Link to="" className="btn">
+									Send Reset Link
+								</Link>
 							</button>
 							<p>
 								Already have an account?{" "}

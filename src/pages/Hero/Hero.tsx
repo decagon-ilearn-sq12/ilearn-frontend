@@ -25,7 +25,7 @@ const Hero = ({ mystyle }: any) => {
 					<div className="hamburger">
 						<a href="#">Tutors</a>
 						<a href="">About Us</a>
-						<a href="#"> Login</a>
+						<a href="#"> Login User</a>
 					</div>
 				)}
 				<div className="navbar-links">
