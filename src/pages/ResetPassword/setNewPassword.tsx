@@ -1,7 +1,7 @@
 import "./resetPassword.css";
 import * as qs from "query-string";
 // import { toast } from "react-toastify";
-import Group from "../../assets/Group.svg";
+import Group from "../../assets/group.svg";
 import { Link, useSearchParams } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";

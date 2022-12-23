@@ -1,6 +1,6 @@
 import './resetPassword.css'
 import React, { useState } from 'react'
-import Group from '../../assets/Group.svg'
+import Group from '../../assets/group.svg'
 // import { toast } from "react-toastify";
 import { Link } from 'react-router-dom'
 import axios from 'axios'
