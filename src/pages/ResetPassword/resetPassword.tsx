@@ -4,7 +4,7 @@ import Group from '../../assets/Group.svg'
 // import { toast } from "react-toastify";
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-const baseUrl = import.meta.env.SERVER_URL
+const baseUrl = import.meta.env.VITE_SERVER_URL
 
 const ResetPassword = () => {
   const [createForm, setCreateForm] = useState({})
@@ -22,14 +22,10 @@ const ResetPassword = () => {
     try {
       console.log('async function')
       const response = await axios.post(
-        `http://localhost:4000/users/forgot-password`,
+        `${baseUrl}/users/forgot-password`,
         createForm
       )
-      console.log(baseUrl)
       window.alert(response.data.message)
-      // http://localhost:4000/users/forgot-password
-
-      console.log('response is ', response.data)
     } catch (error) {
       console.log(error)
       window.alert(error)
@@ -50,18 +46,6 @@ const ResetPassword = () => {
               <p>Send a link to your email to resend password</p>
             </div>
             <form>
-              {/* <div className="form-group">
-								<label htmlFor="email">Email</label>
-								<br />
-								<input
-									type="email"
-									className="form-control"
-									id="email"
-									name="email"
-									onChange={submitDetails}
-									placeholder="Enter email"
-								/>
-							</div> */}
               <div>
                 <label htmlFor='email'>Email</label>
                 <br />

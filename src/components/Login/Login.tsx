@@ -8,7 +8,7 @@ import { signInWithGooglePopup } from '../../utils/firebaseAuth/firebase'
 import axios from 'axios'
 import.meta.env
 
-const baseUrl = import.meta.env.SERVER_URL
+const baseUrl = import.meta.env.VITE_SERVER_URL
 
 function LoginForm() {
   const googleSignIn = async () => {
@@ -39,14 +39,12 @@ function LoginForm() {
 
     try {
       const response = await axios.post(`${baseUrl}/users/login`, data)
-      console.log(response)
       const signature = response.data.signature
       localStorage.setItem('signature', signature)
       setTimeout(() => {
         window.location.href = '/navbar'
       }, 1000)
     } catch (err: any) {
-      console.log(err.response.data)
       window.alert(err.response.data)
     }
   }

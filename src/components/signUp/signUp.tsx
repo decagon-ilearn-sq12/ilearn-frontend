@@ -9,7 +9,7 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-const baseUrl = import.meta.env.SERVER_URL
+const baseUrl = import.meta.env.VITE_SERVER_URL
 
 type formFieldType = {
   userType: string
