@@ -1,15 +1,16 @@
-import React from "react";
+import StudentHistoryPage from '../../components/studentHistoryPage/studentHistoryPage'
 
-import ResetPassword from "../../pages/ResetPassword/resetPassword";
-import SetNewPassword from "../../pages/ResetPassword/setNewPassword";
+import ResetPassword from '../../pages/ResetPassword/resetPassword'
+import SetNewPassword from '../../pages/ResetPassword/setNewPassword'
 
 const Home = () => {
-	return (
-		<div>
-			<ResetPassword />
-			<SetNewPassword />
-		</div>
-	);
-};
+  return (
+    <div>
+      <StudentHistoryPage />
+      <ResetPassword />
+      <SetNewPassword />
+    </div>
+  )
+}
 
-export default Home;
+export default Home
