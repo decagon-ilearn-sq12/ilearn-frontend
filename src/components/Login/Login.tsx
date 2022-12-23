@@ -6,7 +6,6 @@ import { FcGoogle } from 'react-icons/fc'
 import logo from '../../assets/logo.png'
 import { signInWithGooglePopup } from '../../utils/firebaseAuth/firebase'
 import axios from 'axios'
-import.meta.env
 
 const baseUrl = import.meta.env.VITE_SERVER_URL
 
@@ -35,7 +34,6 @@ function LoginForm() {
       email: emailRef.current?.value,
       password: passwordRef.current?.value,
     }
-    console.log(data)
 
     try {
       const response = await axios.post(`${baseUrl}/users/login`, data)
